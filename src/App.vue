@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppMusic from './components/AppMusic.vue';
 
 import { store } from "./store.js";
 
 export default {
   components: {
     AppHeader,
+    AppMusic,
   },
   data() {
     return {
@@ -26,6 +28,7 @@ export default {
 
 <template>
   <AppHeader @changeColor="overColor" @default="backNormal" />
+  <AppMusic />
 </template>
 
 <style>

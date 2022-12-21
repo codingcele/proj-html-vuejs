@@ -21,6 +21,7 @@ export default {
 
 <template>
     <header>
+        <div class="pink-div"></div>
         <div class="top">
             <img :src=store.Header.img alt="">
             <div class="menu">
@@ -119,6 +120,15 @@ header {
                 background-color: white;
             }
         }
+    }
+
+    .pink-div {
+        position: relative;
+        left: 36.2vw;
+        top: 110vh;
+        height: 10px;
+        width: 26vw;
+        background-color: rgb(234, 74, 86);
     }
 }
 </style>
