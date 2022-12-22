@@ -71,6 +71,7 @@ header {
             color: white;
             font-size: 30px;
             cursor: pointer;
+            padding: 10px;
         }
     }
 
