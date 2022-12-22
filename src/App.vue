@@ -5,6 +5,7 @@ import AppLatestNews from './components/AppLatestNews.vue';
 import AppDates from './components/AppDates.vue';
 import AppFooterTop from './components/AppFooterTop.vue';
 import AppFooterBottom from './components/AppFooterBottom.vue';
+import AppPlay from './components/AppPlay.vue';
 
 import { store } from "./store.js";
 
@@ -16,6 +17,7 @@ export default {
     AppDates,
     AppFooterTop,
     AppFooterBottom,
+    AppPlay,
   },
   data() {
     return {
@@ -24,26 +26,21 @@ export default {
   },
   methods: {
     overColor() {
-      store.Header.BtnLatest = true;
-    },
-    backNormal() {
-      store.Header.BtnLatest = false;
+      store.Header.BtnLatest = !store.Header.BtnLatest;
     },
     over() {
-      store.Header.BtnLive = true;
+      store.Header.BtnLive = !store.Header.BtnLive;
     },
-    back() {
-      store.Header.BtnLive = false;
-    }
   }
 }
 
 </script>
 
 <template>
-  <AppHeader @changeColor="overColor" @default="backNormal" @change="over" @def="back" />
+  <AppHeader @changeColor="overColor" @change="over" />
   <AppMusic />
   <AppLatestNews />
+  <AppPlay />
   <AppDates />
   <AppFooterTop />
   <AppFooterBottom />

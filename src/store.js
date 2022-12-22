@@ -102,5 +102,10 @@ export const store = reactive({
             ig: "fa-brands fa-instagram",
             yt: "fa-brands fa-youtube",
         }
+    },
+    Play: {
+        text: `"I just listened to it and said to myself, "Man I really love this album." Still, today, it just sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They're good. And they're inventive. I haven't heard anything this year that's as inventive. I don't really expect to."`,
+        fa: "fa-solid fa-play",
+        over: false,
     }
 })

@@ -51,11 +51,11 @@ export default {
             </span>
             <div class="buttons">
                 <div class="button latest" :class="{ change: store.Header.BtnLatest }" @mouseover="$emit('changeColor')"
-                    @mouseout="$emit('default')">
+                    @mouseout="$emit('changeColor')">
                     LATEST ALBUM
                 </div>
                 <div class="button live" :class="{ change: store.Header.BtnLive }" @mouseover="$emit('change')"
-                    @mouseout="$emit('def')">
+                    @mouseout="$emit('change')">
                     LIVE DATES
                 </div>
             </div>
