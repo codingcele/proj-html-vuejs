@@ -40,7 +40,8 @@ export default {
                     @mouseout="$emit('default')">
                     LATEST ALBUM
                 </div>
-                <div class="button live">
+                <div class="button live" :class="{ change: store.Header.BtnLive }" @mouseover="$emit('change')"
+                    @mouseout="$emit('def')">
                     LIVE DATES
                 </div>
             </div>

@@ -30,11 +30,13 @@ export default {
     align-items: center;
     height: 15vh;
     background-color: rgb(234, 74, 86);
+    cursor: pointer;
+    color: white;
+    font-size: 11px;
+}
 
-    div {
-        color: white;
-        font-size: 11px;
-        cursor: pointer;
-    }
+.dates:hover {
+    background-color: white;
+    color: black;
 }
 </style>

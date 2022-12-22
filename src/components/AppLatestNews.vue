@@ -15,8 +15,8 @@ export default {
 
 
 <template>
-    <div class="news">
-        <div>
+    <div class="news change">
+        <div class="normal">
             {{ store.News.text }}
         </div>
     </div>
@@ -30,11 +30,13 @@ export default {
     align-items: center;
     height: 15vh;
     background-color: rgb(234, 74, 86);
+    color: white;
+    cursor: pointer;
+    font-size: 11px;
+}
 
-    div {
-        color: white;
-        font-size: 11px;
-        cursor: pointer;
-    }
+.news:hover {
+    color: black;
+    background-color: white;
 }
 </style>

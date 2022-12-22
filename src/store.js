@@ -5,6 +5,7 @@ export const store = reactive({
         img: "/avada-music-logo.png",
         fa: "fa-solid fa-bars",
         BtnLatest: false,
+        BtnLive: false,
     },
     Music: {
         title: "Music Is Life",

@@ -28,6 +28,12 @@ export default {
     },
     backNormal() {
       store.Header.BtnLatest = false;
+    },
+    over() {
+      store.Header.BtnLive = true;
+    },
+    back() {
+      store.Header.BtnLive = false;
     }
   }
 }
@@ -35,7 +41,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @changeColor="overColor" @default="backNormal" />
+  <AppHeader @changeColor="overColor" @default="backNormal" @change="over" @def="back" />
   <AppMusic />
   <AppLatestNews />
   <AppDates />
