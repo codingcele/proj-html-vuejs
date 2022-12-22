@@ -2,6 +2,9 @@
 
 import { store } from "../store.js";
 
+import AppMenu from './AppMenu.vue'
+
+
 export default {
     name: "AppHeader",
     data() {
@@ -9,10 +12,16 @@ export default {
             store,
         }
     },
+    components: {
+        AppMenu,
+    },
     methods: {
         submit() {
             this.$emit('changeColor')
-        }
+        },
+        activity() {
+            store.Menu.hidden = !store.Menu.hidden;
+        },
     },
 }
 
@@ -25,10 +34,15 @@ export default {
         <div class="top">
             <img :src=store.Header.img alt="">
             <div class="menu">
-                <font-awesome-icon :icon=store.Header.fa />
+                <span :class="{ clicked: !store.Menu.hidden }">
+                    <font-awesome-icon :icon=store.Header.fa class="fontMenu" @click="activity" />
+                </span>
             </div>
         </div>
         <div class="center">
+            <div class="menuContainer" :class="{ active: store.Menu.hidden }">
+                <AppMenu @closeMenu="activity" />
+            </div>
             <h1 class="untold">
                 Untold Stories
             </h1>
@@ -71,8 +85,17 @@ header {
             align-items: center;
             color: white;
             font-size: 30px;
-            cursor: pointer;
-            padding: 10px;
+
+            span {
+                position: relative;
+                left: 15px;
+                padding: 10px 15px;
+                border-radius: 50%;
+
+                .fontMenu {
+                    cursor: pointer;
+                }
+            }
         }
     }
 
@@ -82,6 +105,13 @@ header {
         align-items: center;
         justify-content: center;
         height: calc(100% - 155px);
+
+        .menuContainer {
+            position: absolute;
+            right: 40px;
+            top: 140px;
+
+        }
 
         .untold {
             color: white;
@@ -122,6 +152,10 @@ header {
                 background-color: white;
             }
         }
+
+        .active {
+            visibility: hidden;
+        }
     }
 
     .pink-div {
@@ -132,5 +166,9 @@ header {
         width: 26vw;
         background-color: rgb(234, 74, 86);
     }
+}
+
+.clicked {
+    background-color: rgba(155, 155, 155, 0.3);
 }
 </style>

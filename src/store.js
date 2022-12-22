@@ -7,6 +7,37 @@ export const store = reactive({
         BtnLatest: false,
         BtnLive: false,
     },
+    Menu: {
+        img: "/avada-music-logo.png",
+        fa: "fa-solid fa-xmark",
+        hidden: true,
+        navs: {
+            fst: {
+                text: "Home",
+                active: true,
+            },
+            snd: {
+                text: "Meet The Band",
+                active: false,
+            },
+            trd: {
+                text: "Live Dates",
+                active: false,
+            },
+            frth: {
+                text: "Latest News",
+                active: false,
+            },
+            fvth: {
+                text: "Albums",
+                active: false,
+            },
+            sth: {
+                text: "Fans",
+                active: false,
+            },
+        }
+    },
     Music: {
         title: "Music Is Life",
         subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui voluptates odit magnam temporibus atque bla bla bla ciao ciao.",
